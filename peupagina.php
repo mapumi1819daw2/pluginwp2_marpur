@@ -21,8 +21,13 @@ function admin_menu_peu_pagina(){
 	$titolEntrada="Peu de pàgina per defecte";
 	$role="administrator";
 	$id="peu_pagina_per_defecte";
-	add_menu_page($titolPagina,$titolEntrada, "read",$role,$id); ;
+	$nom_funcio="nouPeuPagDef";
+	add_menu_page($titolPagina,$titolEntrada,$role,$id, $nom_funcio);
 	}
+
+	function nouPeuPagDef(){
+		include_once('formPeuPagina.php');
+		}
 
 	add_action('admin_menu','admin_menu_peu_pagina');
 
